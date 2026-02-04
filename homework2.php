@@ -5,4 +5,7 @@ echo "<head>";
 echo "<title>HW2</title>";
 echo "</head>";
 echo "<body>";
+echo "<h1>Hello World!</h1>";
+echo "</body>";
+echo "</html";
 ?>

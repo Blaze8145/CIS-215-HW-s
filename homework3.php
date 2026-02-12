@@ -52,6 +52,7 @@
         while (count($name) >1) {
             shuffle($name);
             $noChair = array_pop($name);
+            //array_pop eliminates last person in array
             echo $eliminated . " Out";
         }
         echo $name[0] . " Wins";

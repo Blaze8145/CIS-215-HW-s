@@ -80,7 +80,7 @@
         for($start =1;$start<=$stopNum;$start++){
             if($start%3==0&&$start%5==0){
                 echo "FizzBuzz" . " ";
-            /* To add Mozz add this here
+            /* To add Mazz add this here
             if($start % 7 == 0){
                 echo "Mozz" . " "
             }elseif(){}

@@ -44,6 +44,7 @@
             $divisables++;
         }
     }
+    // For both loops I found that for loops were a better choice for me because of less lines used.
     loops();
     /*This Function Takes names and shuffles thier order then removes that last in list until 1 remains then returns that name.
     */

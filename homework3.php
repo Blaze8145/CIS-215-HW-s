@@ -75,5 +75,5 @@
             }
         }
     }
-    echo FizzBuzz(15);
+    FizzBuzz(15);
 ?>

@@ -3,7 +3,7 @@
     Author:Julian Schrauger jschraug@genesee.edu
     The function loops displays both for loop and while loops of two count up loops
     The function letterGrade receives a number and turns it into a letter grade based on a ifelse chain
-
+    The function FizzBuzz replaces varibles of 3 with Fizz variables of 5 with Buzz and of both FizzBuzz
     */
     function loops(){
         // This for loop counts from 1 to $n and adds only factors of 2 into the array $evens

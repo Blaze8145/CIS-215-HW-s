@@ -3,6 +3,7 @@
     Author:Julian Schrauger jschraug@genesee.edu
     The function loops displays both for loop and while loops of two count up loops
     The function letterGrade receives a number and turns it into a letter grade based on a ifelse chain
+    The function musicalChairs makes an array of names then eliminates the last in list after being shuffled until only one remains.
     The function FizzBuzz replaces variables of 3 with Fizz variables of 5 with Buzz and of both FizzBuzz
     */
     function loops(){
@@ -44,6 +45,17 @@
         }
     }
     loops();
+    /*This Function Takes names and shuffles thier order then removes that last in list until 1 remains then returns that name.
+    */
+    function musicalChairs(){
+        $name = array("Ann","Ben","Charlie","Diane");
+        while (count($name) >1) {
+            shuffle($name);
+            $noChair = array_pop($name);
+            echo $eliminated . " Out";
+        }
+        echo $name[0] . " Wins";
+    }
     /*This Function recieves a number to turn into a letter grade
     */
     $grade =0;

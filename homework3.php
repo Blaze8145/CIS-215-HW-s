@@ -65,13 +65,13 @@
     function FizzBuzz($stopNum){
         for($start =1;$start<=$stopNum;$start++){
             if($start%3==0&&$start%5==0){
-                echo "FizzBuzz";
+                echo "FizzBuzz" . " ";
             }elseif($start%3==0){
-                echo "Fizz";
+                echo "Fizz" . " ";
             }elseif($start%5==0){
-                echo "Buzz";
+                echo "Buzz" . " ";
             }else{
-                echo $start;
+                echo $start . " ";
             }
         }
     }

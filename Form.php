@@ -7,26 +7,38 @@
 <body>
     <main>
         <form action="" method="POST">
-            <p>Enter email Here:</p>
-            <p><input type="email" name="getEmail" id="email_ID" /></p>
+            <div>
+                <label for="email_ID">Enter email Here:</label>
+                <input type="email" name="getEmail" id="email_ID" /></div>
             
-            <p>What's your favorite MTG color combo?</p>
-            <p><input type="checkbox" name="MTG color combo" id="color-white" />White</p>
-            <p><input type="checkbox" name="MTG color combo" id="color-blue" />Blue</p>
-            <p><input type="checkbox" name="MTG color combo" id="color-black" />Black</p>
-            <p><input type="checkbox" name="MTG color combo" id="color-red" />Red</p>
-            <p><input type="checkbox" name="MTG color combo" id="color-green" />Green</p>
-            <p><input type="checkbox" name="MTG color combo" id="color-colorless" />Colorless</p>
+            <div>What's your favorite MTG color combo?</div>
+            <div><input type="checkbox" name="MTG color combo" id="color-white" value="white" /><label for="color-white">White</label></div>
+            <div><input type="checkbox" name="MTG color combo" id="color-blue" value="blue"/><label for="color-blue">Blue</label></div>
+            <div><input type="checkbox" name="MTG color combo" id="color-black" value="black"/><label for="color-black">Black</label></div>
+            <div><input type="checkbox" name="MTG color combo" id="color-red" value="red"/><label for="color-red">Red</label></div>
+            <div><input type="checkbox" name="MTG color combo" id="color-green" value="green"/><label for="color-green">Green</label></div>
+            <div><input type="checkbox" name="MTG color combo" id="color-colorless" value="colorless"/><label for="color-colorless">Colorless</label></div>
         
-             <p>What's your favorite MTG color?</p>
-            <p><input type="radio" name="MTG color" id="color-monoWhite" />White</p>
-            <p><input type="radio" name="MTG color" id="color-monoBlue" />Blue</p>
-            <p><input type="radio" name="MTG color" id="color-monoBlack" />Black</p>
-            <p><input type="radio" name="MTG color" id="color-monoRed" />Red</p>
-            <p><input type="radio" name="MTG color" id="color-monoGreen" />Green</p>
-            <p><input type="radio" name="MTG color" id="color-monoColorless" />Colorless</p>       
-        
-            <button typr="submit" name="submit-button" id="sumbit_ID">Submit</button>
+             <div>What's your favorite MTG color?</div>
+            <div><input type="radio" name="MTG color" id="color-monoWhite" value="white"/><label for="color-monoWhite">White</label></div>
+            <div><input type="radio" name="MTG color" id="color-monoBlue" value="blue"/><label for="color-monoBlue">Blue</label></div>
+            <div><input type="radio" name="MTG color" id="color-monoBlack" value="black"/><label for="color-monoBlack">Black</label></div>
+            <div><input type="radio" name="MTG color" id="color-monoRed" value="red"/><label for="color-monoRed">Red</label></div>
+            <div><input type="radio" name="MTG color" id="color-monoGreen" value="green"/><label for="color-monoGreen">Green</label></div>
+            <div><input type="radio" name="MTG color" id="color-monoColorless" value="colorless"/><label for="color-monoColorless">Colorless</label></div>       
+
+            <div>
+                Select your favorite MTG basic land:
+                <select name="MTG Lands" id=" basic_land_ID">
+                    <option value="White">Plains</option>
+                    <option value="Blue">Island</option>
+                    <option value="Black">Swamp</option>
+                    <option value="Red">Mountian</option>
+                    <option value="Green">Forest</option>
+                    <option value="Colorless">Waste</option>
+            </div>
+
+                <button typr="submit" name="submit-button" id="sumbit_ID">Submit</button>
         </form>
     </main>    
 </body>

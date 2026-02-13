@@ -6,7 +6,7 @@
     </head>
 <body>
     <main>
-        <form action="" method="POST">
+        <form action="confimation.php" method="POST">
             <div>
                 <label for="email_ID">Enter email Here:</label>
                 <input type="email" name="getEmail" id="email_ID" /></div>

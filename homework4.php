@@ -8,9 +8,6 @@
     <main>
         //Holds the quiz in he form.
         <form action="confimation.php" method="POST">
-            <div>
-                <label for="email_ID">Enter email Here:</label>
-                <input type="email" name="getEmail" id="email_ID" /></div>
             <fieldset><legend>What's your favorite way to win in MTG?</legend>
             <div><input type="radio" name="MTG Win" id="agro-wincon" value="agro"/><label for="agro-wincon">Win as quick as you can</label></div>
             <div><input type="radio" name="MTG Win" id="stax-wincon" value="stax"/><label for="stax-wincon">Protect your board and limit your opponents</label></div>

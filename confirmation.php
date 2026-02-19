@@ -1,10 +1,15 @@
 <?php
+    /*
+    Author Julian Schrauger
+    Email: jschraug@genesee.edu
+    Function winner takes the results of the quiz and determines the kind of player the applicant is and deals with a tie.
+    */
     if(!isset($_POST['submit-button'])){
         echo "ERR: Form NOT Found";
         exit();
     }
     $testFeilds=["MTG Win","MTG Hand","MTG Threat","MTG Deck","MTG Games","MTG Topdeck","MTG Table","MTG Card"];
-    //Goes threw Every feild to make sure it is answered
+    //Goes threw Every question to make sure it is answered
     foreach($testFeilds as $MTG){
         if(!isset($_POST[$MTG])){
             echo "ERR: All Question must be answered";

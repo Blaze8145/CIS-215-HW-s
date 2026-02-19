@@ -35,7 +35,7 @@
         }
     }
     //This Function makes is so it will go thruw every player and see which one is the highest.
-    
+    //Tie code sees if multiple varibles equal the firstPlace
     function winner($agro, $stax, $combo, $midrange, $politic){
         $firstPlace = $agro;
         //Sees If any of the other varibles is higher than the firstPlace

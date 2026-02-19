@@ -59,7 +59,7 @@
         if($midrange == $firstPlace) $tie++;
         if($politic == $firstPlace) $tie++;
         //If result is a tie returns this
-        if($firstPlace > 1){
+        if($tie > 1){
             echo "<p>Your a Hybrid Player!</p>";
             return;
         }

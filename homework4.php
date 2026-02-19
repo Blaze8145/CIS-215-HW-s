@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8"/>
-    <title>Form Example</title>
+    <title>MTG Player Test</title>
     </head>
 <body>
     <main>

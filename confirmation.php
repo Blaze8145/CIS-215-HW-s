@@ -37,15 +37,42 @@
     //This Function makes is so it will go thruw every player and see which one is the highest.
     
     function winner($agro, $stax, $combo, $midrange, $politic){
-        if($agro >= $stax&&$agro >= $combo&& $agro >= $midrange && $agro >= $politic){
+        $firstPlace = $agro;
+        //Sees If any of the other varibles is higher than the firstPlace
+        if($stax > $firstPlace){
+            $firstPlace = $stax;
+        }
+        if($combo > $firstPlace){
+            $firstPlace = $combo;
+        }
+        if($midrange > $firstPlace){
+            $firstPlace = $midrange;
+        }
+        if($politic > $firstPlace){
+            $firstPlace = $politic;
+        }
+        //If a tie
+        $tie = 0;
+        if($agro == $firstPlace) $tie++;
+        if($stax == $firstPlace) $tie++;
+        if($combo == $firstPlace) $tie++;
+        if($midrange == $firstPlace) $tie++;
+        if($politic == $firstPlace) $tie++;
+        //If result is a tie returns this
+        if($firstPlace > 1){
+            echo "<p>Your a Hybrid Player!</p>";
+            return;
+        }
+        //If no tie present
+        if($agro == $firstPlace){
             echo"<p>You are a Agro Player!</p>";
-        }elseif($stax >= $agro&&$stax >= $combo&& $stax >= $midrange && $stax >= $politic){
+        }elseif($stax == $firstPlace){
             echo"<p>You are a Stax Player!</p>";
-        }elseif($combo >= $stax&&$combo >= $agro&& $combo >= $midrange && $combo >= $politic){
+        }elseif($combo == $firstPlace){
             echo"<p>You are a Combo Player!</p>";
-        }elseif($midrange >= $stax&&$midrange >= $combo&& $midrange >= $agro && $midrange >= $politic){
+        }elseif($midrange == $firstPlace){
             echo"<p>You are a Midrange Player!</p>";
-        }elseif($politic >= $stax&&$politic >= $combo&& $politic >= $midrange && $politic >= $agro){
+        }elseif($politic == $firstPlace){
             echo"<p>You are a Politic Player!</p>";
         }
     }

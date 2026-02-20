@@ -8,6 +8,10 @@
     <main>
         <form action="confimation.php" method="POST">
             <div>
+                <label for="password-id">Enter your password</label>
+                <input type="password" name="password-input" id="password-id"/>
+            </div>
+            <div>
                 <label for="email_ID">Enter email Here:</label>
                 <input type="email" name="getEmail" id="email_ID" /></div>
             <fieldset>

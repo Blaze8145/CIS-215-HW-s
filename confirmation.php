@@ -8,7 +8,7 @@
         echo "ERR: Form NOT Found";
         exit();
     }
-    $testFeilds=["MTG Win","MTG Hand","MTG Threat","MTG Deck","MTG Games","MTG Topdeck","MTG Table","MTG Card"];
+    $testFeilds=["MTG_Win","MTG_Hand","MTG_Threat","MTG_Deck","MTG_Games","MTG_Topdeck","MTG_Table","MTG_Card"];
     //Goes threw Every question to make sure it is answered
     foreach($testFeilds as $MTG){
         if(!isset($_POST[$MTG])){
@@ -22,7 +22,7 @@
     $combo = 0;
     $midrange = 0;
     $politic = 0;
-    $result=[$_POST["MTG Win"],$_POST["MTG Hand"],$_POST["MTG Threat"],$_POST["MTG Deck"],$_POST["MTG Games"],$_POST["MTG Topdeck"],$_POST["MTG Table"],$_POST["MTG Card"]];
+    $result=[$_POST["MTG_Win"],$_POST["MTG_Hand"],$_POST["MTG_Threat"],$_POST["MTG_Deck"],$_POST["MTG_Games"],$_POST["MTG_Topdeck"],$_POST["MTG_Table"],$_POST["MTG_Card"]];
     foreach($result as $point){
         if($point == "agro"){
             $agro++;

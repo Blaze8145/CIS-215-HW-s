@@ -9,6 +9,6 @@ $price = $_POST["price"];
 $days = $_POST["daysListed"];
 $prepared_stat = $db->prepare("INSERT INTO houses(houseCity,price,daysListed) VALUES(?,?,?);");
 $prepared_stat->execute(array($city,$price,$days));
-$exampleInput = $_POST["example"];
-$prepared_stat->execute(array($exampleInput));
+//$exampleInput = $_POST["example"];
+//$prepared_stat->execute(array($exampleInput));
 ?>

@@ -8,7 +8,7 @@
     <main>
         <form action="config.php" method="POST">
         <label>City:</label><br>
-        <div><input type="text" name="houseCity" required></div>
+        <div><input type="text" name="city" required></div>
     
         <label>Price:</label><br>
         <div><input type="number" name="price" required></div>

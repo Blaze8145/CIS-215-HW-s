@@ -3,9 +3,9 @@ ini_set('display_errors', 1);
 error_reporting(E_ALL);
 
 function connectDB(){
-    $database = ""; // Put in your GCC netid (ex: kgross1)
-    $user = ""; // Put in your GCC netid (ex: kgross1)
-    $pass = ""; // Put in your MySQL Password (from the email)
+    $database = "jschraug"; // Put in your GCC netid (ex: kgross1)
+    $user = "jschraug"; // Put in your GCC netid (ex: kgross1)
+    $pass = "tapioca"; // Put in your MySQL Password (from the email)
     $host = "localhost";
     try {
         $db = new PDO("mysql:host=$host;dbname=$database", $user, $pass);

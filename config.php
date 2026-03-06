@@ -14,6 +14,10 @@ $db->query(
  runtime INT,
  director VARCHAR(50),
  dateRelease DATE)");
+
+//Removes all data in table without drop
+$clear = $db->query("TRUNCATE TABLE movies");
+
 //Sets up Varible to add values into table.
 $movie = $db->prepare("INSERT INTO movies(movieName,rating,runtime,director,dateRelease) VALUES(?,?,?,?,?);");
 
@@ -54,6 +58,9 @@ $complexResult = $complex->fetchAll();
 foreach($complexResult as $complexRow){
     echo "<div>" .$complexRow['movieName']. "</div>";
 }
+//Delete Cougar_Award from previous
+$colmenReset=$db->prepare("ALTER TABLE movies DROP COLUMN Cougar_Award");
+$colmenReset->execute();
 
 //Cougar Awards
 //Adds row Cougar_Award
@@ -82,7 +89,5 @@ $finalCut = $remainingData->fetchAll();
 foreach($finalCut as $finalRow){
     echo "<div>" .$finalRow['movieName']. "</div>";
 }
-//Delete Cougar_Award
-$colmenReset=$db->prepare("ALTER TABLE movies DROP COLUMN Cougar_Award");
-$colmenReset->execute();
+
 ?>

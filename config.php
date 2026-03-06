@@ -48,7 +48,7 @@ foreach($result as $row){
 }
 
 //Complex Select
-$complex=$db->prepare("SELECT * FROM movies WHERE movieName NOT LIKE '%and%' AND movieName NOT LIKE '%the%' AND movieName NOT LIKE '%a%' AND movieName NOT LIKE '%an%' ");
+$complex=$db->prepare("SELECT * FROM movies WHERE movieName NOT LIKE '% and %' AND movieName NOT LIKE '% the %' AND movieName NOT LIKE '% a %' AND movieName NOT LIKE '% an %' ");
 $complex->execute();
 $complexResult = $complex->fetchAll();
 foreach($complexResult as $complexRow){
@@ -76,7 +76,7 @@ foreach($winnerResult as $winnerRow){
 //Delete from table
 $delete=$db->prepare("DELETE FROM movies WHERE runtime < 100");
 $delete->execute();
-$remainingData = $db->prepare("SELECT movieName FROM movies WHERE runtime < 120;");
+$remainingData = $db->prepare("SELECT movieName FROM movies;");
 $remainingData->execute();
 $finalCut = $remainingData->fetchAll();
 foreach($finalCut as $finalRow){

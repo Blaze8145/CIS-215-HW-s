@@ -1,4 +1,8 @@
 <?php
+/*
+Author: Julian Schrauger
+Email: jschraug@genesee.edu
+*/
 include("dbconfig.php");
 $db = connectDB();
 //Makes Movies Table to 5 Colemns
@@ -15,7 +19,7 @@ $movie = $db->prepare("INSERT INTO movies(movieName,rating,runtime,director,date
 
 //A Silent Voice
 //Personal rating 11/10
-movie->execute(array("A Silent Voice","PG-13",130,"Naoko Yamada","2016-09-17"));
+$movie->execute(array("A Silent Voice","PG-13",130,"Naoko Yamada","2016-09-17"));
 
 //Monty Python and the Holy Grail
 //Personal Rating 8/10
@@ -36,10 +40,34 @@ $movie->execute(array("SpaceBalls","R",96,"Mel Brooks","1987-06-24"));
 //Gets Data from Movies
 $select_data = $db->prepare("SELECT movieName FROM movies WHERE runtime < 120;");
 $select_data->execute();
-$result = $select_data->fetchall();
+$result = $select_data->fetchAll();
 
-//Fetch data
+//Fetch data and print
 foreach($result as $movie => $row){
-    echo "<div></div>";
+    echo "<div>" .$row['movieName']. "</div>";
 }
+
+//Cougar Awards
+//Adds row Cougar_Award
+$award=$db->prepare("ALTER TABLE movies ADD Cougar_Award INT");
+$award->execute();
+//Sets every movie Cougar_Award to 0
+$runners=$db->prepare("UPDATE movies SET Cougar_Award = 0");
+$runners->execute();
+//Sets 1 movie in Cougar_Award to 1
+$awardWinner=$db->prepare("UPDATE movies SET Cougar_Award =1 WHERE movieName = ?");
+$awardWinner->execute(array("A Silent Voice"));
+//Displays table in order of Cougar_Award
+$winner=$db->prepare("SELECT * FROM movies ORDER BY Cougar_Award DESC");
+$winner->execute();
+$winnerResult = $winner->fetchAll();
+foreach($winnerResult as $winnerRow){
+    echo "<div>" .$row['movieName']. "</div>";
+}
+
+//Delete from table
+$delete=$db->prepare("DELETE FROM movies WHERE runtime < 100");
+$delete->execute();
+
+
 ?>

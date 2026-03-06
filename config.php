@@ -38,9 +38,9 @@ $movie->execute(array("Iron Lung","R",110,"Mark Fischbach","2024-01-01"));
 $movie->execute(array("SpaceBalls","R",96,"Mel Brooks","1987-06-24"));
 
 //Gets Data from Movies
-$select_data = $db->prepare("SELECT movieName FROM movies WHERE runtime < 120;");
-$select_data->execute();
-$result = $select_data->fetchAll();
+$selectData = $db->prepare("SELECT movieName FROM movies WHERE runtime < 120;");
+$selectData->execute();
+$result = $selectData->fetchAll();
 
 //Fetch data and print
 foreach($result as $row){
@@ -76,6 +76,10 @@ foreach($winnerResult as $winnerRow){
 //Delete from table
 $delete=$db->prepare("DELETE FROM movies WHERE runtime < 100");
 $delete->execute();
-
-
+$remainingData = $db->prepare("SELECT movieName FROM movies WHERE runtime < 120;");
+$remainingData->execute();
+$finalCut = $remainingData->fetchAll();
+foreach($finalCut as $finalRow){
+    echo "<div>" .$finalRow['movieName']. "</div>";
+}
 ?>

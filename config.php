@@ -57,7 +57,7 @@ foreach($complexResult as $complexRow){
 
 //Cougar Awards
 //Adds row Cougar_Award
-$award=$db->prepare("ALTER TABLE movies ADD IF NOT EXISTS Cougar_Award INT");
+$award=$db->prepare("ALTER TABLE movies ADD Cougar_Award INT");
 $award->execute();
 //Sets every movie Cougar_Award to 0
 $runners=$db->prepare("UPDATE movies SET Cougar_Award = 0");
@@ -82,4 +82,7 @@ $finalCut = $remainingData->fetchAll();
 foreach($finalCut as $finalRow){
     echo "<div>" .$finalRow['movieName']. "</div>";
 }
+//Delete Cougar_Award
+$colmenReset=$db->prepare("ALTER TABLE movies DROP COLUMN Cougar_Award");
+$colmenReset->execute();
 ?>

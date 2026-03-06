@@ -43,8 +43,16 @@ $select_data->execute();
 $result = $select_data->fetchAll();
 
 //Fetch data and print
-foreach($result as $movie => $row){
+foreach($result as $row){
     echo "<div>" .$row['movieName']. "</div>";
+}
+
+//Complex Select
+$complex=$db-prepare("SELECT * FROM movies WHERE movieName NOT LIKE '%and%' AND movieName NOT LIKE '%the%' AND movieName NOT LIKE '%a%' AND movieName NOT LIKE '%an%' ");
+$complex->execute();
+$complexResult = $complex->fetchAll();
+foreach($complexResult as $complexRow){
+    echo "<div>" .$complexRow['movieName']. "</div>";
 }
 
 //Cougar Awards
@@ -62,7 +70,7 @@ $winner=$db->prepare("SELECT * FROM movies ORDER BY Cougar_Award DESC");
 $winner->execute();
 $winnerResult = $winner->fetchAll();
 foreach($winnerResult as $winnerRow){
-    echo "<div>" .$row['movieName']. "</div>";
+    echo "<div>" .$winnerRow['movieName']. $winnerRow['Cougar_Award']. "</div>";
 }
 
 //Delete from table

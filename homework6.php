@@ -1,6 +1,3 @@
-    /*
-    Author:Julian Schrauger jschraug@genesee.edu
-    */
 <!doctype html>
 <html lang="en">
     <head>
@@ -10,7 +7,7 @@
     </head>
     <body>
         <main>
-            
+            <p1>Html is Functioning</p1>
         </main>    
     </body>
 </html>

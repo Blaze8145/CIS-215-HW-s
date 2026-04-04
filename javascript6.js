@@ -1,4 +1,5 @@
 /*
+    Author:Julian Schrauger jschraug@genesee.edu
     The function loops displays both for loop and while loops of two count up loops
     The function letterGrade receives a number and turns it into a letter grade based on a ifelse chain
     The function musicalChairs makes an array of names then eliminates the last in list after being shuffled until only one remains.
@@ -6,14 +7,14 @@
  */
 function loops(){
     // This for loop counts from 1 to n and adds only factors of 2 into the array evens
-       let evens = array();
+       const evens = new Array();
        let max =10;
        for(let num = 1;num <= max;num++){
             if(num%2 == 0){
                 evens.push(num);
             }
        }
-       let whileEvens = array();
+       let whileEvens = new Array();
        let whileMax =10;
        let count = 1;
        //This while loop counts from 1 to count and adds only factors of 2 into the array whileEvens
@@ -47,7 +48,7 @@ function loops(){
 /*This Function Takes names and shuffles thier order then removes that last in list until 1 remains then returns that name.
 */
 function musicalChairs(){
-        const name = array["Ann","Ben","Charlie","Diane"];
+        const name = Array["Ann","Ben","Charlie","Diane"];
         while (name.length >1) {
             name.sort(()=>Math.random() - 0.5);
             name.pop(name);

@@ -51,7 +51,7 @@ function musicalChairs(){
         const name =["Ann","Ben","Charlie","Diane"];
         while (name.length >1) {
             name.sort(()=>Math.random() - 0.5);
-            name.pop(name);
+            let eliminated = name.pop();
             //.pop eliminates last person in array
             console.log(eliminated , " Out");
         }

@@ -1,8 +1,14 @@
+/*
+    The function loops displays both for loop and while loops of two count up loops
+    The function letterGrade receives a number and turns it into a letter grade based on a ifelse chain
+    The function musicalChairs makes an array of names then eliminates the last in list after being shuffled until only one remains.
+    The function FizzBuzz replaces variables of 3 with Fizz variables of 5 with Buzz and of both FizzBuzz
+ */
 function loops(){
-    // This for loop counts from 1 to $n and adds only factors of 2 into the array $evens
+    // This for loop counts from 1 to n and adds only factors of 2 into the array evens
        let evens = array();
        let max =10;
-       for(num = 1;num <= max;num++){
+       for(let num = 1;num <= max;num++){
             if(num%2 == 0){
                 evens.push(num);
             }
@@ -10,10 +16,10 @@ function loops(){
        let whileEvens = array();
        let whileMax =10;
        let count = 1;
-       //This while loop counts from 1 to $count and adds only factors of 2 into the array $whileEvens
+       //This while loop counts from 1 to count and adds only factors of 2 into the array whileEvens
        while(count <= whileMax){
             if(count%2 == 0){
-                whileEvens.push(num);
+                whileEvens.push(count);
             }
             count++;
        }
@@ -41,11 +47,11 @@ function loops(){
 /*This Function Takes names and shuffles thier order then removes that last in list until 1 remains then returns that name.
 */
 function musicalChairs(){
-        const name = array("Ann","Ben","Charlie","Diane");
-        while (count(name) >1) {
-            shuffle(name);
-            noChair = array_pop($name);
-            //array_pop eliminates last person in array
+        const name = array["Ann","Ben","Charlie","Diane"];
+        while (name.length >1) {
+            name.sort(()=>Math.random() - 0.5);
+            name.pop(name);
+            //.pop eliminates last person in array
             console.log(eliminated , " Out");
         }
         console.log(name[0] , " Wins");
@@ -70,11 +76,11 @@ function musicalChairs(){
     
     const stopNum=0;
     function FizzBuzz(stopNum){
-        for(start =1;start<=stopNum;$start++){
+        for(start =1;start<=stopNum;start++){
             if(start%3==0&&start%5==0){
                 console.log("FizzBuzz" , " ");
             /* To add Mazz add this here
-            if($start % 7 == 0){
+            if(start % 7 == 0){
                 console.log "Mozz" , " "
             }else if(){}
             */

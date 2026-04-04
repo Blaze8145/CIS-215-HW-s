@@ -48,7 +48,7 @@ function loops(){
 /*This Function Takes names and shuffles thier order then removes that last in list until 1 remains then returns that name.
 */
 function musicalChairs(){
-        const name = Array["Ann","Ben","Charlie","Diane"];
+        const name =["Ann","Ben","Charlie","Diane"];
         while (name.length >1) {
             name.sort(()=>Math.random() - 0.5);
             name.pop(name);

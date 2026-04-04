@@ -57,6 +57,7 @@ function musicalChairs(){
         }
         console.log(name[0] , " Wins");
     }
+musicalChairs();
     /*This Function recieves a number to turn into a letter grade
     */
     let grade = 0;

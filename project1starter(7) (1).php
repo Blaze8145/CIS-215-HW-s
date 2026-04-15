@@ -3,7 +3,7 @@
     <head>
         <title>Survey: Survey Name</title>  <!-- TODO: Change "Survey Name" to the topic of your survey -->
         <link rel="stylesheet" href="styles.css">
-        
+        <script src="HW7.js"></script>
     </head>
     <body>
 
@@ -13,11 +13,13 @@
         <div>
             <label for="email-id">Enter your email: </label>
             <input type="email" name="email-name" id="email-id" required>
+            <span class="Error"></span>
         </div>
 
         <div>
             <label for="pw-id">Enter your password: </label>
             <input type="password" name="pw-name" id="pw-id" required>
+            <span class="Error"></span>
         </div>
 
         <fieldset>
@@ -57,13 +59,15 @@
         <div>
             <label for="Baymax">On a scale of 1-10, How do you rate your mood?</label>
             <input type="number" name="healthcare" id="Baymax" min="1" max="10" required>
+            <span class="Error"></span>
         </div>
 
         <div>
             <label for= "season">What is your favorite season?</label>
                 <input type="text" name="seasons" id="season" minlength="4" maxlength="6" required>
-        </div>
-    
+                <span class="Error"></span>
+            </div>
+        <button type="button" id="counter">Click Counter</button>
         <button type="submit" name="submit-button" id="sumbit_ID">Submit</button>
     </form>
         <a href='dataview.php'>View Survey Data</a>

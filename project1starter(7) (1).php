@@ -13,7 +13,7 @@
         <div>
             <label for="email-id">Enter your email: </label>
             <input type="email" name="email-name" id="email-id" required>
-            <span class="Error"></span>
+            <span class="Error" class="blank"></span>
         </div>
 
         <div>

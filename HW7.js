@@ -25,3 +25,20 @@ document.querySelectorAll('input[name="age"]').forEach(radio => {
 });
 
 //Email Validator
+const emailInput = document.querySelector("#email-id");
+emailInput.addEventListener('keyup', emailValid);
+async function emailvalid(event){
+  let blank = event.target.parentNode.querySelector(".blank");
+    blank.innerText = "";
+
+  let targetEmail = event.target.value;
+  const response = await fetch(`email/checker.php?email=${targetEmail}`);
+  console.log("Responce:", response);
+
+  let result = await response.json();
+  console.log("Promise", result);
+
+  if(result["status"] == 0){
+    blank.innertext = result["message"];
+  }
+}

@@ -4,7 +4,6 @@
 */
 document.addEventListener("DOMContentLoaded", () =>{
   //Button used to show ow many times it was clicked
-  //https://developer.mozilla.org/en-US/docs/Web/API/
   const button = document.querySelector("#counter");
 
   button.addEventListener("click", (event) => {
@@ -12,7 +11,6 @@ document.addEventListener("DOMContentLoaded", () =>{
   });
 
 //Other Radio Button
-//https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/change_event
   document.querySelectorAll('input[name="age"]').forEach(radio => {
       radio.addEventListener("change", async () => {
           const otherBox = document.getElementById("otherBox");

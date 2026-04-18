@@ -41,7 +41,7 @@
             
             <!-- User Input Other Age -->
             <div><input type="radio" name="age" id="other" value="other" required><label for="other">Other</label></div>
-            <div id="otherBox"><input type="text" id="otherInput" name="other_Input"><label for="otherInput">Specify</label></div>
+            <div id="otherBox" style="display: none;"><input type="text" id="otherInput" name="other_Input"><label for="otherInput">Specify</label></div>
         </div>
         </fieldset>
 

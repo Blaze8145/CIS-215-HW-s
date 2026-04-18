@@ -27,7 +27,7 @@ document.querySelectorAll('input[name="age"]').forEach(radio => {
 //Email Validator
 const emailInput = document.querySelector("#email-id");
 emailInput.addEventListener('keyup', emailValid);
-async function emailvalid(event){
+async function emailValid(event){
   let blank = event.target.parentNode.querySelector(".blank");
     blank.innerText = "";
 

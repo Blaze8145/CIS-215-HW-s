@@ -38,6 +38,10 @@
             <div><input type="radio" name="age" id="range11" value="58-62" required><label for="range11">58-62 </label></div>
             <div><input type="radio" name="age" id="range12" value="63-67" required><label for="range12">63-67 </label></div>
             <div><input type="radio" name="age" id="range13" value="68+" required><label for="range13">68+ </label></div>
+
+        <!-- User Input Other Age -->
+            <div><input type="radio" name="age" id="other" value="other" required><label for="other">Other</label></div>
+            <div id="otherBox"><input type="text" id="otherInput" name="other_Input"><label for="otherInput">Specify</label></div>
         </div>
         </fieldset>
 
